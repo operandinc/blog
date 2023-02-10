@@ -1,28 +1,23 @@
-import { fileClient } from "@/lib/mcp";
-
-const rootFolder = process.env.OPERAND_FOLDER_ID as string;
+// Tags:
+// changelog
+// company
+// engineering
+// philosophy
+import { allPosts } from "@/.contentlayer/generated";
+import { PostCard } from "./postCard";
 
 export default async function Home({
   searchParams,
 }: {
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  const client = fileClient();
-  const files = await client.listFiles({
-    filter: {
-      parentId: rootFolder,
-    },
-    pagination: {
-      pageSize: 16,
-      cursor: searchParams?.cursor
-        ? (searchParams.cursor as string)
-        : undefined,
-    },
-  });
-
   return (
-    <main>
-      <h1 className="text-3xl font-bold underline">Hello</h1>
+    <main className="w-full">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
+        {allPosts.map((post, i) => (
+          <PostCard post={post} key={i} />
+        ))}
+      </div>
     </main>
   );
 }

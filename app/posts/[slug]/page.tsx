@@ -1,0 +1,22 @@
+import { format, parseISO } from "date-fns";
+import { allPosts } from "contentlayer/generated";
+
+export const generateStaticParams = async () =>
+  allPosts.map((post) => ({ slug: post._raw.flattenedPath.split("/")[1] }));
+
+const PostPage = ({ params }: { params: { slug: string } }) => {
+  const post = allPosts.find(
+    (post) => post._raw.flattenedPath === "posts/" + params.slug
+  );
+
+  if (!post) {
+    return <div>Post not found</div>;
+  }
+  return (
+    <article className="prose p-8 mx-auto">
+      <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
+    </article>
+  );
+};
+
+export default PostPage;
