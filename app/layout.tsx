@@ -37,7 +37,7 @@ export default async function RootLayout({
 async function Header() {
   const navigationItems = [
     { name: "All", href: "/" },
-    { name: "Changelog", href: "/changelog" },
+    { name: "Operator Log", href: "/log" },
     { name: "Company", href: "/company" },
     { name: "Engineering", href: "/engineering" },
     { name: "Philosophy", href: "/philosophy" },

@@ -1,0 +1,30 @@
+---
+title: "Search is Solved, Discovery is Not"
+date: "2022-02-04"
+description: "A brief exploration of the difference between search and discovery, and how semantic search engines can help solve the discovery problem."
+tag: "philosophy"
+---
+
+Foreword: This is an extension of some of the ideas initially outlined in a [blog post](https://justjake.substack.com/p/fundamental-problems) written in 2020 by [Jake Cooper](https://twitter.com/justjake). Jake’s blog is full of little hidden gems like this. After reading this article, I’d highly encourage you to check out some more of Jake’s work (and his company, [Railway](https://railway.app/)).
+
+---
+
+In my mind, the problem of “information retrieval” can be subdivided into two distinct parts: search and discovery. The search problem, or the idea of finding a specific needle in a haystack, is _generally_ solved. If some snippet of information exists in Google’s index, then it’s very likely that with a (perhaps clever) search query, that anyone can navigate to and find that information. The tricky part about this whole “find a needle in a haystack” idea is that you initially need to not only know the needle exists, but in order to find it, you’ll need to know some basic properties about the needle itself, perhaps its color, shape or size. In a metaphorical sense, this is the root of the “discovery” problem — how can you find something that you didn’t know existed?
+
+For the first time ever, and thanks to a recent boom of powerful transformer-based ML models, I think we have a real shot at solving the discovery problem once and for all.
+
+First, the status quo. Collectively, we’ve become really good at searching for things, and even from a young age, kids are taught how to formulate search queries to find the information they want. It seems, for many, that the idea of “information retrieval” has become analogous with searching, which I think is generally a bad thing on a number of different fronts. Individually, this means it that takes conscious effort to discover and learn about different opinions or viewpoints on any given topic. Within teams, information silos emerge as different groups aren’t exposed to each-others thought patterns and notes. Zooming out, larger information silos occur within political parties, organizations, even countries, leading to (perhaps radical) differences in opinions and outlooks on particular issues.
+
+Luckily, I think the industry as a whole is starting to change all of this. Recent breakthroughs in transformer-based models have enabled new types of search engines to be built, namely, semantic engines. By understanding the context of a particular query and the relationships between different entities (think people, places, things, etc.), semantic search engines can return much more relevant results than traditional keyword-based engines. Specifically, semantic engines are focused on finding the best “content-level” matches, e.g. a particular sentence, paragraph, or idea, as opposed to traditional engines which are focused on document-level matches.
+
+That being said, and as good as semantic search engines are these days, I don’t think that simply swapping them in for their keyword-based (full-text) alternative is enough to make any meaningful progress on the “discovery problem”. In my view, this is fundamentally a UI/UX problem — how can we design application interfaces for discovery? Interestingly, we likely had to answer the same question when we started working on the search problem. In that case, we chose to rely on a search bar (at the top right hand corner of course) and perhaps more recently, CMD+K as a convenient and quick way to find information from anywhere within an app.
+
+The neat thing about discovery is that it’s a fundamental shift from this “reactive” model (e.g. the user types in a search query) to a “proactive” model, where the application is constantly looking for opportunities to surface interesting, relevant information that runs parallel with the users input. In the case of a note taking app, searching would still take place within the search bar, but as the user is typing a new note, a discovery-focused app would be doing semantic searches in the background, perhaps exposing relevant content in a sidebar UI component. In this model, the users existing knowledge base (in addition to any linked knowledge, e.g., from co-workers, friends, etc.) become immediately useful and accessible. Rather than this text just sitting stagnant, waiting to be searched for, it’s alive, and it’s working with the end-user similar to how a pair programmer would (see: [Man-Computer Symbiosis](https://groups.csail.mit.edu/medg/people/psz/Licklider.html)).
+
+Switching over from a reactive to a proactive frame of reference has some additional benefits as well. For example, my notes would likely paint a pretty coherent picture of what I’m interested in, as would others notes. The same underlying technology which powers semantic search can thus be used to evaluate “similarity” in ideas, outlook, approaches between two peoples notes. At that point, those two people should both be getting pinged about each-other, and the introduction should be made. Naturally, this seems like a really great approach to team-building, as it allows groups of people to be “clustered” together by their interests or thought patterns. Obviously there are some issues here (some interests are better than others), but certainly an interesting and perhaps valuable application of the underlying tech.
+
+We have a long way to go towards solving the discovery problem, and frankly, I don’t think we’ll ever truly be able to solve it fully. That being said, progress towards it means huge net positive gains for society as a whole — more knowledge sharing, diversity of ideas, and exchange of perspectives.
+
+If you’re working on a “discovery-centric” application, and are focused on creating serendipity for your users, I’d love to chat with you (and perhaps provide your infrastructure) — [reach out](https://twitter.com/morgallant)!
+
+Who knew, maybe we’ve been looking in the wrong haystack all along?

@@ -1,11 +1,9 @@
 ---
 title: "About us"
-date: 2021-05-18T00:00:00-07:00
-description: "About us as a company"
+date: "2023-02-11"
+description: "Who we are, what we're working on, and how to join our team."
 tag: "company"
 ---
-
-# About us
 
 We're a globally distributed team, but are headquartered in the historic Fort Mason Center in San Francisco. The company itself was founded on the idea of ["Human-Computer Symbiosis"](https://groups.csail.mit.edu/medg/people/psz/Licklider.html) as put forth by J. C. R. Licklider. We believe that the future of computing lies in the tight integration between humans and computers, where each can augment the other's strengths.
 

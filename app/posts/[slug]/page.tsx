@@ -13,7 +13,14 @@ const PostPage = ({ params }: { params: { slug: string } }) => {
     return <div>Post not found</div>;
   }
   return (
-    <article className="prose p-8 mx-auto">
+    <article className="prose p-8 mx-auto space-y-4">
+      <div className="badge badge-outline">{post.tag}</div>
+      <h1>{post.title}</h1>
+      <p>
+        <time dateTime={post.date}>
+          {format(parseISO(post.date), "LLLL d, yyyy")}
+        </time>
+      </p>
       <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
     </article>
   );
