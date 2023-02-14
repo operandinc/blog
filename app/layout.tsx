@@ -9,6 +9,7 @@ import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import "./globals.css";
 import { Logo } from "./logo";
+import SearchDialog from "@/components/client/search";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,10 +38,9 @@ export default async function RootLayout({
 async function Header() {
   const navigationItems = [
     { name: "All", href: "/" },
-    { name: "Operator Log", href: "/log" },
-    { name: "Company", href: "/company" },
-    { name: "Engineering", href: "/engineering" },
+    { name: "Operator Logs", href: "/log" },
     { name: "Philosophy", href: "/philosophy" },
+    { name: "Company", href: "/company" },
   ];
   return (
     <>
@@ -90,11 +90,7 @@ async function Header() {
           </ul>
         </div>
         <div className="navbar-end">
-          <input
-            type="text"
-            placeholder="Search"
-            className="input input-sm lg:input-md input-bordered"
-          />
+          <SearchDialog />
         </div>
       </nav>
     </>

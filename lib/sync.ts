@@ -2,6 +2,7 @@ import { FileService, operandClient } from "@operandinc/sdk";
 import { spawn } from "child_process";
 
 async function sync(): Promise<string> {
+  // Load the environment variables from the .env file
   const client = await operandClient(
     FileService,
     process.env.OPERAND_API_KEY as string
@@ -20,10 +21,17 @@ async function sync(): Promise<string> {
     const fileName = file.name;
     // First we rm -rf the entire content directory
     // This is a bit of a hack, but it works for now
-    const rm = spawn("rm", ["-rf", "content/posts/*"]);
+    const rm = spawn("rm", ["-rf", "content/posts"]);
     rm.on("close", (code) => {
       if (code !== 0) {
         console.log(`rm process exited with code ${code}`);
+      }
+    });
+    // Make the content directory again
+    const mkdir = spawn("mkdir", ["-p", "content/posts"]);
+    mkdir.on("close", (code) => {
+      if (code !== 0) {
+        console.log(`mkdir process exited with code ${code}`);
       }
     });
 
@@ -38,9 +46,8 @@ async function sync(): Promise<string> {
       `content/posts/${fileName}`,
     ]);
     curl.on("close", (code) => {
-      if (code == 0) {
-        successFiles.push(fileName);
-      } else {
+      successFiles.push(fileName);
+      if (code != 0) {
         console.log(`curl process exited with code ${code}`);
       }
     });

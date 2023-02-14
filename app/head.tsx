@@ -9,7 +9,7 @@ export default function Head() {
     <>
       <title>{title}</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.svg" />
       <meta content={description} name="description" />
       <meta content={title} property="og:title" />
       <meta content={description} property="og:description" />

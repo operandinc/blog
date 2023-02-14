@@ -1,7 +1,5 @@
 import { allPosts } from "@/.contentlayer/generated";
-import { getPostLink } from "@/lib/link";
-import { format, parseISO } from "date-fns";
-import { CopyLinkButton, LoadMoreButton } from "@/components/client/buttons";
+import { LoadMoreButton } from "@/components/client/buttons";
 import Post from "@/components/server/post";
 
 export default async function Home({
@@ -13,16 +11,17 @@ export default async function Home({
   const display = searchParams?.display
     ? parseInt(searchParams.display as string)
     : 2;
-
-  const sortedPosts = allPosts.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
-  const maxPosts = sortedPosts.length;
+  const logPosts = allPosts
+    .filter((post) => post.tag === "company")
+    .sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+  const maxPosts = logPosts.length;
   return (
     <main className="w-full">
       <div className="w-full grid grid-cols-1 gap-10">
         {/* Display first 2 */}
-        {sortedPosts.slice(0, display).map((post, i) => (
+        {logPosts.slice(0, display).map((post, i) => (
           <Post post={post} key={i} />
         ))}
         <div className="no-prose flex justify-center">
