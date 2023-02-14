@@ -31,27 +31,27 @@ export default async function Page(props: Props) {
   }
 
   return (
-    <div className="flex justify-between gap-4 p-6 w-full">
-      {/* Render results by file */}
-      <div className="w-full h-[80vh] overflow-auto flex">
-        <div className="prose w-2/3">
-          {data.matches.map((match) => (
-            <div key={match.matchId}>
-              <blockquote className="not-italic font-normal">
-                {match.snippet}
-              </blockquote>
-              <div className="flex items-center gap-2 prose-sm">
-                From
-                <Link
-                  href={`/posts/${fileName(match.fileId)}`}
-                  className="bg-neutral text-neutral-content rounded-lg px-2 py-1 flex items-center gap-1"
-                >
-                  <span>{fileName(match.fileId)}</span>
-                </Link>
-              </div>
+    <div className="w-full h-screen overflow-auto flex scrollbar-hide lg:scrollbar-default">
+      <div className="prose lg:w-2/3">
+        <p>
+          Results for <i>"{props.searchParams?.q}"</i>
+        </p>
+        {data.matches.map((match) => (
+          <div key={match.matchId}>
+            <blockquote className="not-italic font-normal">
+              {match.snippet}
+            </blockquote>
+            <div className="flex items-center gap-2 prose-sm">
+              From
+              <Link
+                href={`/posts/${fileName(match.fileId)}`}
+                className="bg-neutral text-neutral-content rounded-lg px-2 py-1 flex items-center gap-1"
+              >
+                <span>{fileName(match.fileId)}</span>
+              </Link>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

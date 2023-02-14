@@ -34,6 +34,7 @@ const SearchDialog = () => {
               onChange={(e) => setQuery(e.target.value)}
               className="input w-full"
               placeholder="Search..."
+              enterKeyHint="search"
               onKeyUp={(e) => {
                 if (e.key === "Enter") {
                   router.push(`/search?q=${query}`);
@@ -47,10 +48,10 @@ const SearchDialog = () => {
       {/* Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="input flex justify-between w-1/2 input-bordered items-center"
+        className="input input-sm lg:input-md flex justify-between w-full lg:w-1/2 input-bordered items-center "
       >
         <span>Search</span>{" "}
-        <span>
+        <span className="hidden lg:block">
           <kbd className="kbd kbd-sm">⌘</kbd>+
           <kbd className="kbd kbd-sm">K</kbd>
         </span>
