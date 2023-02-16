@@ -10,6 +10,7 @@ import { SocialIcon } from "react-social-icons";
 import "./globals.css";
 import { Logo } from "./logo";
 import SearchDialog from "@/components/client/search";
+import Analytics from "./analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default async function RootLayout({
         <Header />
         <main className="p-4 min-h-screen ">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
@@ -102,13 +104,14 @@ function Footer() {
     // Keep multiples of 4
     // TODO add one more
     main: [
-      { name: "Home", href: "/" },
-      { name: "Docs", href: "/developers" },
-      { name: "Blog", href: "/blog" },
-      { name: "About", href: "/about" },
+      { name: "Home", href: "https://beta.operand.ai" },
+      { name: "Developers", href: "https://beta.operand.ai/developers" },
+      { name: "Docs", href: "https://docs.operand.ai" },
+      { name: "Blog", href: "/" },
+      { name: "About", href: "https://beta.operand.ai/about" },
       { name: "Support", href: "mailto:support@operand.ai" },
-      { name: "Terms", href: "/terms" },
-      { name: "Privacy", href: "/privacy" },
+      { name: "Terms", href: "https://beta.operand.ai/terms" },
+      { name: "Privacy", href: "https://beta.operand.ai/privacy" },
     ],
   };
   return (
