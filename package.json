@@ -18,7 +18,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
+    "@types/react-dom": "18.0.11",
     "contentlayer": "^0.3.0",
     "daisyui": "^2.50.0",
     "date-fns": "^2.29.3",
