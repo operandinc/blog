@@ -5,8 +5,6 @@ description: "Early-access beta, developer documentation + new pricing scheme!"
 tag: "log"
 ---
 
-# Operator Log #1
-
 Welcome back to the Operator Log! This is our official change-log, and we'll be documenting/highlighting the changes and fixes we ship each week here.
 
 The last few weeks were, to say the least, chaotic. Huge influx of new users (nearly 4x'ed our daily active user counts) in combination with some big moves by a high-volume customer of ours stretched our system to the breaking point. As such, users encountered a large number of indexing and search errors, and generally had a poor experience across the board.
