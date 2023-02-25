@@ -9,13 +9,13 @@ Hope everyone had a great week! Making some huge progress this week towards prop
 
 At a glance, here’s what we got done this week:
 
-Shipped “smart folders”, a way for you to import data from other apps (and the web in general) into Operand. At the moment, we support Linear, Discord and Notion, in addition to web-based RSS feeds and sitemaps.
+- Shipped “smart folders”, a way for you to import data from other apps (and the web in general) into Operand. At the moment, we support Linear, Discord and Notion, in addition to web-based RSS feeds and sitemaps.
 
-Launched our Converse API endpoint to developers, allowing them to build conversational experiences within their apps with ease. We’ve also thrown a few goodies in there already :)
+- Launched our Converse API endpoint to developers, allowing them to build conversational experiences within their apps with ease. We’ve also thrown a few goodies in there already :)
 
-Added URL importing, i.e. an easy way to import content from the web into your file tree. Available both in the dashboard, and in the API.
+- Added URL importing, i.e. an easy way to import content from the web into your file tree. Available both in the dashboard, and in the API.
 
-Shipped our landing page tailored for developers ([beta.operand.ai/developers](https://beta.operand.ai/developers)), which includes details of our new usage-based pricing scheme.
+- Shipped our landing page tailored for developers ([beta.operand.ai/developers](https://beta.operand.ai/developers)), which includes details of our new usage-based pricing scheme.
 
 ### Smart Folders (Beta)
 
