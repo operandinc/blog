@@ -6,21 +6,22 @@
     "dev": "next dev",
     "build": "ts-node ./prebuild.ts  && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@buf/operand_mcp.bufbuild_connect-web": "^0.6.0-20230202052056-632f22013b30.1",
     "@headlessui/react": "^1.7.10",
-    "@heroicons/react": "^2.0.15",
+    "@heroicons/react": "^2.0.16",
     "@next/font": "13.1.6",
     "@operandinc/sdk": "^5.0.16",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.11.18",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
     "contentlayer": "^0.3.0",
-    "daisyui": "^2.50.0",
+    "daisyui": "^2.51.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
     "eslint": "8.33.0",
@@ -28,6 +29,7 @@
     "fathom-client": "^3.5.0",
     "next": "13.1.6",
     "next-contentlayer": "^0.3.0",
+    "next-sitemap": "^3.1.54",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hotkeys-hook": "^4.3.5",
@@ -40,7 +42,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.4",
+    "tailwindcss": "^3.2.7",
     "ts-node": "^10.9.1"
   }
 }
