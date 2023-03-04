@@ -13,7 +13,7 @@
     "@buf/operand_mcp.bufbuild_connect-web": "^0.6.0-20230202052056-632f22013b30.1",
     "@headlessui/react": "^1.7.10",
     "@heroicons/react": "^2.0.16",
-    "@next/font": "13.1.6",
+    "@next/font": "13.2.3",
     "@operandinc/sdk": "^5.0.18",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.9",
