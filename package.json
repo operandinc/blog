@@ -17,7 +17,7 @@
     "@operandinc/sdk": "^5.0.18",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "18.11.18",
+    "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "contentlayer": "^0.3.0",
