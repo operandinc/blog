@@ -27,7 +27,7 @@
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "fathom-client": "^3.5.0",
-    "next": "13.1.6",
+    "next": "13.2.3",
     "next-contentlayer": "^0.3.0",
     "next-sitemap": "^3.1.54",
     "react": "18.2.0",
