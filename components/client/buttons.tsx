@@ -13,6 +13,7 @@ export const LoadMoreButton: React.FC<{ display: number }> = ({ display }) => {
       onClick={() => {
         setLoading(true);
         router.push(`${pathname}?display=${display + 2}`);
+        router.refresh();
         setLoading(false);
       }}
     >

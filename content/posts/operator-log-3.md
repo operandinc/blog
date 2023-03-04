@@ -1,0 +1,45 @@
+---
+title: "Operator Log #3"
+date: "2023-03-03"
+description: "Slack, Meeting Bots, YouTube Videos, and more!"
+tag: "log"
+---
+
+Howdy y’all! 🤠 Hope everyone had a great week! We’re fast approaching the proper launch of our beta (i.e. [https://beta.operand.ai](https://beta.operand.ai) → [https://operand.ai](https://operand.ai)), which means we’re on polish duty, as well as planning out the transition. We’ll be releasing more information on this transition shortly, don’t worry, it won’t be too bad.
+
+Here’s what we got done this week:
+
+- Two new smart folders: Slack & Meeting Bots.
+- Add support for processing YouTube videos via URL.
+- Plus a whole host of smaller bug fixes and improvements.
+
+### Slack Smart Folder
+
+We’ve went ahead and added a new smart folder type, Slack! This means you can now sync the contents of a Slack workspace with your Operand file tree. How does it work? When you create the smart folder, we’ll redirect you over to Slack to authenticate. After you’re done, our Slack bot will auto-join your Slack channels and start the sync. In the future, we’ll add some more options here (i.e. to limit which channels the bot can join, etc).
+
+To create a Slack smart folder, simply click New → Smart Folder in the dashboard, pick a name for the folder, and choose the Slack option.
+
+### Meeting Recording (Google Meet, Zoom, Microsoft Teams)
+
+In addition to Slack, we’ve also added another smart folder type: Meeting Bots! This smart folder allows you to dispatch meeting bots to your meetings, which record the meeting and once finished, store the recording as a video file. As normal, we’ll process the recording, transcribe it, and make it searchable automatically (you can also summarize a meeting by asking Operand to do so).
+
+How does this work? After creating a Meeting Bot smart folder, double-click on it, and you’ll be greeted with a view which contains a list of your past meetings, along with a form to input a meeting link. We currently support Google Meet, Zoom and Microsoft Teams links. After submitting, a bot will join your meeting automatically.
+
+### YouTube Videos
+
+You can now import a YouTube video into your file tree! To do so, you can click New → Link, and copy/paste the link to the video you want to index. We’ll create a `.link` file, and process the video as normal (i.e. by transcribing it).
+
+Note: You won’t be able to access the underlying video file, sorry! Lots of legal stuff here.
+
+### Bug Fixes / Improvements
+
+- Added document editor for markdown files.
+- You can now move files within the dashboard.
+- Added `upsert` option to the `CreateFile` endpoint, as well as the associated multi-part form upload handler. When creating a file, you may choose to set `upsert=true` which will prevent `AlreadyExist` errors, and instead replace the existing file with new contents.
+- New users will have a `getting_started.md` file in their file tree upon signing up.
+- Made improvements to our Discord smart folder, fixed a number of bugs and in general, made processing more reliable.
+- Added a “Copy ID” option on the dashboard, which can be shared with support when debugging a processing issue.
+- Fixed an internal error related to processing audio and video files, these should process much more reliably than before.
+- Re-built our PDF processors to be able to handler larger sized files. So far, we’ve been able to test files up to 1,400 pages.
+- Added a number of missing icons on the dashboard.
+- As you traverse the file tree on the dashboard, we now update the page URL properly. This allows you to bookmark links to re-visit them quickly in the future. This is especially good for shared folders, or folders that you visit often.
