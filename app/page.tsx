@@ -33,3 +33,6 @@ export default async function Home({
     </main>
   );
 }
+
+// force dynamic
+export const dynamic = "force-dynamic";

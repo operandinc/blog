@@ -12,8 +12,7 @@ export const LoadMoreButton: React.FC<{ display: number }> = ({ display }) => {
       className={`btn btn-primary btn-wide ${loading ? "loading" : ""}`}
       onClick={() => {
         setLoading(true);
-        router.push(`${pathname}?display=${display + 2}`);
-        router.refresh();
+        router.replace(`${pathname}?display=${display + 2}`);
         setLoading(false);
       }}
     >
