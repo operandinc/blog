@@ -66,7 +66,7 @@ async function Header() {
                 </li>
               ))}
               <li>
-                <Link href="https://beta.operand.ai" aria-label="Home">
+                <Link href="https://operand.ai" aria-label="Home">
                   Back to Main Site
                 </Link>
               </li>
@@ -76,7 +76,7 @@ async function Header() {
         <div className="hidden lg:block navbar-start">
           <ul className="menu menu-horizontal">
             <li>
-              <Link href="https://beta.operand.ai" aria-label="Home">
+              <Link href="https://operand.ai" aria-label="Home">
                 <Logo className="h-10 w-auto" />
               </Link>
             </li>
@@ -104,14 +104,14 @@ function Footer() {
     // Keep multiples of 4
     // TODO add one more
     main: [
-      { name: "Home", href: "https://beta.operand.ai" },
-      { name: "Developers", href: "https://beta.operand.ai/developers" },
+      { name: "Home", href: "https://operand.ai" },
+      { name: "Developers", href: "https://operand.ai/developers" },
       { name: "Docs", href: "https://docs.operand.ai" },
       { name: "Blog", href: "/" },
-      { name: "About", href: "https://beta.operand.ai/about" },
+      { name: "About", href: "https://operand.ai/about" },
       { name: "Support", href: "mailto:support@operand.ai" },
-      { name: "Terms", href: "https://beta.operand.ai/terms" },
-      { name: "Privacy", href: "https://beta.operand.ai/privacy" },
+      { name: "Terms", href: "https://operand.ai/terms" },
+      { name: "Privacy", href: "https://operand.ai/privacy" },
     ],
   };
   return (
