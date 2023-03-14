@@ -41,7 +41,7 @@ async function Header() {
   const navigationItems = [
     { name: "All", href: "/" },
     { name: "Operator Logs", href: "/log" },
-    { name: "Philosophy", href: "/philosophy" },
+    { name: "Case Studies", href: "/case-studies" },
     { name: "Company", href: "/company" },
   ];
   return (

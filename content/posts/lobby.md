@@ -1,0 +1,66 @@
+---
+title: "How Lobby is Solving Information Asymmetry within DAOs using Operand"
+date: "2022-05-12"
+description: "Lobby’s founder talks about some of major problems which exist within DAOs today, notably information asymmetry between contributors, and how their team is tackling these problems with Operand."
+tag: "case-study"
+---
+
+DAOs, decentralized autonomous organizations, are perhaps one of the most interesting experiments in large-scale organizational behaviour we’ve seen in decades. These organizations exist to organize and facilitate the collaboration between thousands, even hundreds of thousands of people, by leveraging recent advancements in Web3 and more specifically, blockchain technologies. Interestingly, many of the same organizational difficulties that exist in larger corporations are also prevalent in DAOs, and are usually amplified by the lack of any clear, centralized control structure.
+
+For this case study, we sat down with [Wilson](https://twitter.com/WiLSONSACCOUNT/), the founder of [Lobby](https://www.lobby.so/), who has built the team working on solving a lot of these underlying, organizational struggles within DAOs. Wilson started the company after experiencing a number of problems first-hand within a DAO he was a part of in the summer of 2021, most notably the problem of information asymmetry.
+
+> ... the biggest issue was information asymmetry. People who needed [the] information, didn’t have it. ... I wanted to build a place that could be the home for how DAOs do work.
+
+Traditional organizational systems, e.g., hierarchical folders, start to break down as organizations get larger and larger. According to Wilson, it’s “not only [the] asymmetry between the people that have the information and those that don’t”, there exists a second asymmetry “between the people who know where to look and those that don’t.” In a sense, Lobby aims to become the “KnowledgeOS” for DAOs, helping contributors “find what they’re looking for and get back to doing what they do best”.
+
+### Focusing on the end-user experience
+
+![Advanced search features have been showcased on Lobby’s landing page since inception.](/assets/lobby/lobby-homepage.png)
+
+Even early on in the company’s development, Wilson knew getting search and knowledge discovery right was going to be a key component to Lobby’s solution to the information asymmetry problem within DAOs.
+
+> ... we probably wouldn’t be able to convert [DAOs] without search from Operand, ... it’s such a powerful feature.
+
+That being said, without having a huge background in NLP, the Lobby team was worried they’d have to default to a more traditional search experience. For example, within their database itself or using another provider, which in Wilson's words, would've "significantly reduced" the experience for end-users.
+
+During our initial conversations, it was clear that the focus, the key KPI if you will, was how fast a DAO contributor could find the content and ideas they were looking for. To accomplish this, we'd focus on two key features:
+
+- **Content-based search (i.e. semantic search).** In contrast to traditional approaches, this search technique is focused on the content and meaning of the content, rather than specific words / phrases.
+- **Intelligent question answering.** Rather than just providing a list of results and/or snippets of content, we'd like to be able to synthesize factual answers to the query directly, drawing from one (or more) documents.
+
+### Integrating with Operand
+
+All in all, the integration of Operand within Lobby's production systems took [Alex](https://twitter.com/zthh626), an engineer on the Lobby team, a single day. This speed was possible because Operand was able to hook into Lobby's existing systems very naturally. As documents are mutated within Lobby, these changes are pushed to Operand in real-time, ensuring that search results are always up-to-date and relevant. Finally, to do the initial population, Alex wrote a quick script to migrate all of Lobby's existing documents. To quote Wilson, “[it involved] adding a few API calls here and there, and it was ready to go.”
+
+Included with Lobby's subscription is dedicated infrastructure and support from Operand, which means that any questions and/or feedback is answered within a few hours, or most commonly, a few minutes.
+
+During the initial integration, as well as the migration, the Operand team was on standby to a) ensure that the ingration went smoothly and b) to address feedback in real-time. We ended up lending a hand with code-review, and answered questions in a dedicated support channel directly inside Lobby's internal Discord server.
+
+![An example of a search result from Lobby's search engine.](/assets/lobby/lobby-bitcoin-litecoin.png)
+
+When a user searches within Lobby, two things happen in quick succession:
+
+- A search query is fired, returning the most relevant content and ideas from the knowledge base to the end-user. This is a very fast operation, meaning the end-user can find what they're looking for extremely quickly.
+- In the background, a Q&A request is fired which returns an answer, a confidence level, and a list of sources used to compile the answer. If the confidence threshold is met, representing the probability that this answer is factually correct, the answer is rendered in the search results page.
+
+Generally, if we can answer the user's question directly, we try to do so without the user even needing to click into a particular document and read through the content. Notably, answers to questions are possibly compiled from multiple documents, which means we're able to perhaps more fully answer the original question. Users are able to submit direct feedback, in the form of a "thumbs up" or "thumbs down" vote, which allows Operand to learn from the experience and improve the quality of future answers. So far, feedback has been ~94% positive (and we're working on improving that even further).
+
+### Initial reactions from the community
+
+Initial reactions to the integration from the Lobby user base were overwhelmingly positive, so much so that search has become the first thing that any new user will experience within the app.
+
+> … [search] is the thing that gets people really jazzed about Lobby. ... I want that to be the very first thing you experience with Lobby, [and to realize] how powerful it is.
+
+Interestingly, search has become a natural onboarding mechanism within Lobby for users as sort of an initial “wow” moment, which leads them into the core application and prompts them to explore more of what the tool has to offer. “Once you start searching and looking for things, it starts to reveal the other components of our experience that are really tailored to DAOs” said Wilson.
+
+![The first screen a user sees when using Lobby.](/assets/lobby/lobby-searchbar.png)
+
+In terms of initial customer reaction, it’s been great to say the least. Going to leave this quote from Wilson to speak for itself:
+
+> People always ask about search in demos. They always want to know how it works. They always want to double click and zero in on that and see what's really happening. Customers love search. They can't get enough of it. And not only is it easy for them, but it's fun ... they go make a change and it's immediately reflected and they can see that in real time and it really makes things sticky. … just by using it one or two times they realize just how powerful it will be for every single contributor who's trying to look for stuff ... the customers feedback on it has been incredible.
+
+### Moving forward
+
+Moving forward, Lobby has big plans to leverage information, the knowledge bases of DAOs themselves, to build amazingly powerful features into their platform. This aligns closely with Operand's vision to "make knowledge come alive", and we're excited to continue working with Lobby to make this happen. Knowledge continues to be distributed incredibly asymmetrically, throughout both DAOs and traditional organizations, and we think that Lobby has a real shot of solving this problem, first within DAOs and afterwards within large organizations as a whole.
+
+To this day, we continue to work closely with the Lobby team to build out this vision. If you're interested in getting involved, Lobby is currently [hiring](https://www.lobby.so/careers), as [are we](/about)!

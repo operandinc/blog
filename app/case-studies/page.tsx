@@ -7,7 +7,7 @@ export default async function Home({
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
   const logPosts = allPosts
-    .filter((post) => post.tag === "philosophy")
+    .filter((post) => post.tag === "case-study")
     .sort((a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
