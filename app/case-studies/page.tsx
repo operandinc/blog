@@ -1,9 +1,5 @@
-import Posts from "@/components/client/posts";
+import Redirect from "@/components/client/redirect";
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-  return <Posts tags={["case study"]} searchParams={searchParams} />;
+export default function Page() {
+  return <Redirect location="/case-studies/1" />;
 }

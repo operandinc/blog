@@ -1,5 +1,5 @@
 import { allPosts } from "@/app/content";
-import Post from "@/components/client/post";
+import Post from "@/components/server/post";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post.slug }));

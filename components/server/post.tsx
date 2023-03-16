@@ -1,6 +1,6 @@
 import { Post } from "@/app/content";
 import { format, parseISO } from "date-fns";
-import { CopyLinkButton } from "./buttons";
+import { CopyLinkButton } from "../client/buttons";
 
 const Post: React.FC<{ post: Post }> = ({ post }) => {
   return (

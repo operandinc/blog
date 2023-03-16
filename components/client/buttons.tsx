@@ -3,19 +3,21 @@
 import { usePathname, useRouter } from "next/navigation";
 import * as React from "react";
 
-export const PageButton: React.FC<{ page: number; active: boolean }> = ({
-  page,
-  active,
-}) => {
+export const PageButton: React.FC<{
+  page: number;
+  active: boolean;
+  section?: string;
+}> = ({ page, active, section }) => {
   const router = useRouter();
-  const pathname = usePathname();
   return (
     <button
-      className={`btn ${active && "btn-active"}`}
+      className={`btn ${active ? "btn-primary" : ""}`}
       onClick={() => {
-        router.push(`${pathname}?page=${page}`);
-        router.refresh();
-        // Scroll to top of page
+        if (section) {
+          router.push(`${section}/page/${page}`);
+        } else {
+          router.push(`/page/${page}`);
+        }
         window.scrollTo(0, 0);
       }}
     >
