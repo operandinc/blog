@@ -32,7 +32,7 @@ export default async function Page(props: Props) {
 
   return (
     <div className="w-full h-screen overflow-auto flex scrollbar-hide lg:scrollbar-default">
-      <div className="prose lg:w-2/3">
+      <div className="prose lg:w-2/3 mx-auto">
         <p>
           Results for <i>"{props.searchParams?.q}"</i>
         </p>

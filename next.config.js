@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
+const withMDX = require("@next/mdx")();
 const nextConfig = {
   experimental: {
     appDir: true,
+    mdxRs: true,
     scrollRestoration: true,
   },
 };
 
-const { withContentlayer } = require("next-contentlayer");
-
-module.exports = withContentlayer(nextConfig);
+module.exports = withMDX(nextConfig);

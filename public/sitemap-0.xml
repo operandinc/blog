@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://blog.operand.ai/log</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://blog.operand.ai/philosophy</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://blog.operand.ai/company</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://blog.operand.ai/posts/operator-log-1</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://blog.operand.ai/posts/operator-log-2</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://blog.operand.ai/posts/operator-log-3</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://blog.operand.ai/posts/search-is-solved</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://blog.operand.ai/posts/virtual-assistants</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://blog.operand.ai</loc><lastmod>2023-03-05T02:12:38.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai</loc><lastmod>2023-03-16T03:44:46.580Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/company</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/logs</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/case-studies</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/posts/operator-log-4</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/posts/operator-log-3</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/posts/operator-log-2</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/posts/operator-log-1</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/posts/lobby</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/posts/search-is-solved</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.operand.ai/posts/virtual-assistants</loc><lastmod>2023-03-16T03:44:46.581Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

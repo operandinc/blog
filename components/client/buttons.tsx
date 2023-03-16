@@ -3,31 +3,33 @@
 import { usePathname, useRouter } from "next/navigation";
 import * as React from "react";
 
-export const LoadMoreButton: React.FC<{ display: number }> = ({ display }) => {
+export const PageButton: React.FC<{ page: number; active: boolean }> = ({
+  page,
+  active,
+}) => {
   const router = useRouter();
   const pathname = usePathname();
-  const [loading, setLoading] = React.useState(false);
   return (
     <button
-      className={`btn btn-primary btn-wide ${loading ? "loading" : ""}`}
+      className={`btn ${active && "btn-active"}`}
       onClick={() => {
-        setLoading(true);
-        router.replace(`${pathname}?display=${display + 2}`);
-        setLoading(false);
+        router.replace(`${pathname}?page=${page}`);
+        // Scroll to top of page
+        window.scrollTo(0, 0);
       }}
     >
-      Load More
+      {page}
     </button>
   );
 };
 
-export const CopyLinkButton: React.FC<{ href: string }> = ({ href }) => {
+export const CopyLinkButton: React.FC<{ slug: string }> = ({ slug }) => {
   const [copied, setCopied] = React.useState(false);
   return (
     <button
       className={`btn btn-ghost btn-sm`}
       onClick={() => {
-        navigator.clipboard.writeText("https://blog.operand.ai/" + href);
+        navigator.clipboard.writeText("https://blog.operand.ai/posts/" + slug);
         // timeout to reset the button text
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);

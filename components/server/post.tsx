@@ -1,5 +1,4 @@
-import { getPostLink } from "@/lib/link";
-import { Post } from "@/.contentlayer/generated";
+import { Post } from "@/app/content";
 import { format, parseISO } from "date-fns";
 import "server-only";
 import { CopyLinkButton } from "../client/buttons";
@@ -8,9 +7,14 @@ const Post: React.FC<{ post: Post }> = ({ post }) => {
   return (
     <article className="prose p-8 mx-auto space-y-4">
       <div className="flex justify-between items-center">
-        <div className="badge badge-outline">{post.tag}</div>
+        {post.tags.map((tag) => (
+          <div key={tag} className="badge badge-outline">
+            {tag}
+          </div>
+        ))}
+
         {/* Copy link to post */}
-        <CopyLinkButton href={getPostLink(post)} />
+        <CopyLinkButton slug={post.slug} />
       </div>
 
       <h1>{post.title}</h1>
@@ -19,7 +23,7 @@ const Post: React.FC<{ post: Post }> = ({ post }) => {
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
       </p>
-      <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
+      <div className="prose">{post.content}</div>
     </article>
   );
 };

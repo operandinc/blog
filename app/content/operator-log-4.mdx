@@ -1,0 +1,51 @@
+Hey everyone — welcome to Converse week! We spent the majority of the week focused on improving our conversational abilities, and we have a few key things to share here.
+
+Note: We’re now fully moved over to [operand.ai](https://operand.ai/). You can read the migration guide [here](https://www.notion.so/Launching-Operand-2-0-5a5c6b568ff14cf6b58cbaddeb71d4f0), and we’re ready to assist / answer any questions either in our [Discord](https://operand.ai/discord) or via [Email](mailto:support@operand.ai).
+
+Big additions:
+
+- You can now talk to Operand via iMessage!
+- Operand now has built-in long-term memory, i.e. it’ll remember messages and information from the distant past.
+- Operand can now answer near-arbitrary math questions correctly.
+- Added a confidence score to conversational responses, indicating how confident we are in the answer, using the content of your files as a ground-truth.
+
+### **iMessage**
+
+On the dashboard, you’ll now be prompted to “Add to iMessage” (or click on your profile icon on the top right, then “Interfaces). Add your phone number or email address you use for iMessage, we’ll do a quick verification check, and you’re good to go!
+
+With the iMessage bot, you’ll be able to get quick answers backed by the content of the files you’ve previously uploaded with Operand.
+
+### **Long-Term Memory**
+
+When having a long conversation with a chat-bot, i.e. via iMessage, long-term memory means that the bot can remember what you’ve talked about before, even if that conversation occurred months ago. This means that, for example, if you tell the bot your Starbucks order, it’ll be able to remember it!
+
+We’ve shipped this feature for all conversations, even those that API customers expose via their own interface. Once a conversation gets to a certain length (~24 messages), we’ll start looking through past context to provide more dynamic responses to user messages.
+
+### **Built-In Calculator**
+
+Under the hood, Operand is a combination of several large-language models (LLMs). By design, LLMs are inherently unable to perform complex math correctly, though often they’re able to return a result which “looks correct” that can be misleading.
+
+As of today, when asking a question like `what’s the square root of 69`, or `what’s e to the pi to 3 decimal places` to Operand, you’ll get an answer you can reliably trust (because we don’t use LLMs to compute it).
+
+In the future, we’ll slowly add more of these tools to further make up for limitations inherit to language-models, and allow our system to interact with more of the world!
+
+### **Confidence Score**
+
+Factual accuracy is important for a lot of different use cases, especially those where you’d prefer to not show an answer rather than show an incorrect one.
+
+As part of the converse API, we now return a “confidence score”, aka a value between 0 → 1 which indicates how confident we are in our answer. In this case, confidence is determined using your files as the ground-truth, i.e. if you have no files, confidence will always be zero. By design, we’re quite conservative here.
+
+### **Smaller Improvements / Bug Fixes**
+
+- `getting-started.md` is now created properly when a new user signs up.
+- Our usage information in the account page should now be correct for new users. There was an issue here for users who just signed up.
+- We now show confidence in the dashboard chat UI window.
+- Drag and drop uploading is now working via the dashboard, on all browsers.
+- Improvements to our searching UI on the dashboard, will show adjacent text to matches as well as properly support scoped searches.
+- Added `name` to the Converse API. By default, if we have your first and last name, we’ll use that. Some users needed the ability to set a custom name in order to expose the chat-bot to their end-users.
+- Added option for email sign-in, rather than only via Google.
+- Improved processing of HTML and Markdown documents, should yield greatly improved search results across the board.
+- Revamped landing page, added more detail and information on pricing.
+- You can now actually save markdown files you edit.
+- For RSS and Sitemap smart folders there is now a basic viewer so you can see indexing status and the url that the folder is synced with.
+- Fixed an issue when creating Notion smart folders.

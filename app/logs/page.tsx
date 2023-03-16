@@ -5,5 +5,5 @@ export default async function Home({
 }: {
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  return <Posts tags={[]} searchParams={searchParams} />;
+  return <Posts tags={["log"]} searchParams={searchParams} />;
 }

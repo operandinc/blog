@@ -1,29 +1,17 @@
-import { format, parseISO } from "date-fns";
-import { allPosts } from "contentlayer/generated";
+import { allPosts } from "@/app/content";
+import Post from "@/components/server/post";
 
 export const generateStaticParams = async () =>
-  allPosts.map((post) => ({ slug: post._raw.flattenedPath.split("/")[1] }));
+  allPosts.map((post) => ({ slug: post.slug }));
 
 const PostPage = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find(
-    (post) => post._raw.flattenedPath === "posts/" + params.slug
-  );
+  console.log("params", params);
+  const post = allPosts.find((post) => post.slug === params.slug);
 
   if (!post) {
     return <div>Post not found</div>;
   }
-  return (
-    <article className="prose p-8 mx-auto space-y-4">
-      <div className="badge badge-outline">{post.tag}</div>
-      <h1>{post.title}</h1>
-      <p>
-        <time dateTime={post.date}>
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
-    </article>
-  );
+  return <Post post={post} />;
 };
 
 export default PostPage;
