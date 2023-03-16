@@ -1,4 +1,4 @@
-import Posts from "@/components/server/posts";
+import Posts from "@/components/client/posts";
 
 export default async function Home({
   searchParams,

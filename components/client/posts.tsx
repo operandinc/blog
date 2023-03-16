@@ -1,6 +1,7 @@
-import Post from "@/components/server/post";
+"use client";
+import Post from "@/components/client/post";
 import { allPosts } from "@/app/content";
-import { PageButton } from "../client/buttons";
+import { PageButton } from "./buttons";
 
 type PostsProps = {
   tags: string[];
