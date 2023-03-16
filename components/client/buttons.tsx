@@ -14,6 +14,7 @@ export const PageButton: React.FC<{ page: number; active: boolean }> = ({
       className={`btn ${active && "btn-active"}`}
       onClick={() => {
         router.replace(`${pathname}?page=${page}`);
+        router.refresh();
         // Scroll to top of page
         window.scrollTo(0, 0);
       }}
