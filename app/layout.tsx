@@ -12,6 +12,58 @@ import { Logo } from "./logo";
 import SearchDialog from "@/components/client/search";
 import Analytics from "./analytics";
 
+const description =
+  "Blog posts from the Operand team. Product updates, technical deep dives, and our weekly changelog.";
+
+export const metadata = {
+  title: "Operand Blog",
+  description: description,
+  openGraph: {
+    title: "Operand Blog",
+    description: description,
+    url: "https://blog.operand.ai",
+    siteName: "Operand Blog",
+    images: [
+      {
+        url: "https://blog.operand.ai/og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/apple-touch-icon.png ",
+    other: [
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        url: "/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        url: "/favicon-16x16.png",
+      },
+      {
+        rel: "manifest",
+        url: "/site.webmanifest",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Operand Blog",
+    description: description,
+    creator: "@operandai",
+  },
+};
+
 const inter = Inter({
   subsets: ["latin"],
   // default, can also use "swap" to ensure custom font always shows
