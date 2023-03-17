@@ -19,16 +19,26 @@ type Props = {
   };
 };
 
+async function extractUrls(files: File[]) {
+  const urls = new Map<string, string>();
+  for (const file of files) {
+    if (file.properties) {
+      const urlProp = file.properties.properties["_url"].value;
+      if (urlProp.case === "text") {
+        urls.set(file.id, urlProp.value);
+      } else {
+        continue;
+      }
+    }
+  }
+  return urls;
+}
+
 export default async function Page(props: Props) {
-  const data = await getData({
+  var data = await getData({
     query: props.searchParams?.q,
   });
-
-  const matches = Array.from(data.matches);
-  function fileName(id: string) {
-    const file = data.files[id];
-    return file.name.slice(0, -3);
-  }
+  const urls = await extractUrls(Object.values(data.files));
 
   return (
     <div className="w-full h-screen overflow-auto flex scrollbar-hide lg:scrollbar-default">
@@ -44,10 +54,10 @@ export default async function Page(props: Props) {
             <div className="flex items-center gap-2 prose-sm">
               From
               <Link
-                href={`/posts/${fileName(match.fileId)}`}
+                href={urls.get(match.fileId) || "/"}
                 className="bg-neutral text-neutral-content rounded-lg px-2 py-1 flex items-center gap-1"
               >
-                <span>{fileName(match.fileId)}</span>
+                <span>{urls.get(match.fileId) || "/"}</span>
               </Link>
             </div>
           </div>
