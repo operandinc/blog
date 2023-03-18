@@ -2,6 +2,7 @@ import OperatorLog1 from "./content/operator-log-1.mdx";
 import OperatorLog2 from "./content/operator-log-2.mdx";
 import OperatorLog3 from "./content/operator-log-3.mdx";
 import OperatorLog4 from "./content/operator-log-4.mdx";
+import OperatorLog5 from "./content/operator-log-5.mdx";
 
 import VirtualAssistants from "./content/virtual-assistants.mdx";
 import SearchIsSolved from "./content/search-is-solved.mdx";
@@ -74,7 +75,6 @@ export const allPosts: Post[] = [
     slug: "lobby",
     content: Lobby({}),
   },
-
   {
     title: "Operator Log #4",
     date: "2023-03-10",
@@ -82,6 +82,14 @@ export const allPosts: Post[] = [
     slug: "operator-log-4",
     tags: ["log"],
     content: OperatorLog4({}),
+  },
+  {
+    title: "Operator Log #5",
+    date: "2023-03-17",
+    description: "iMessage + Chrome interface, suggested questions, and lots more!",
+    slug: "operator-log-5",
+    tags: ["log"],
+    content: OperatorLog5({}),
   },
 ].sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
