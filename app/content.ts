@@ -86,7 +86,8 @@ export const allPosts: Post[] = [
   {
     title: "Operator Log #5",
     date: "2023-03-17",
-    description: "iMessage + Chrome interface, suggested questions, and lots more!",
+    description:
+      "iMessage + Chrome interface, suggested questions, and lots more!",
     slug: "operator-log-5",
     tags: ["log"],
     content: OperatorLog5({}),

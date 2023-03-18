@@ -3,9 +3,10 @@ import { PageButton } from "../client/buttons";
 
 const Posts: React.FC<{
   posts: Post[];
+  section?: string;
   pages: number[];
   current: number;
-}> = ({ posts, pages, current }) => {
+}> = ({ posts, pages, current, section }) => {
   return (
     <main className="w-full">
       <div className="w-full grid grid-cols-1 gap-10">
@@ -17,7 +18,12 @@ const Posts: React.FC<{
       <div className="w-full flex justify-center">
         <div className="btn-group">
           {pages.map((page) => (
-            <PageButton key={page} page={page} active={current == page} />
+            <PageButton
+              key={page}
+              page={page}
+              active={current == page}
+              section={section}
+            />
           ))}
         </div>
       </div>

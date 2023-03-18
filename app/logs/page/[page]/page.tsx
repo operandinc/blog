@@ -7,7 +7,8 @@ export const generateStaticParams = async () =>
     .map((_, i) => ({ page: Math.round(i / 3) }));
 
 const PostPage = ({ params }: { params: { page: number } }) => {
-  const posts = allPosts.slice(
+  const logPosts = allPosts.filter((post) => post.tags.includes("log"));
+  const posts = logPosts.slice(
     (params.page - 1) * 3,
     (params.page - 1) * 3 + 3
   );
@@ -16,9 +17,10 @@ const PostPage = ({ params }: { params: { page: number } }) => {
   }
   return (
     <Posts
+      section="logs"
       posts={posts}
       pages={Array.from(
-        { length: Math.ceil(allPosts.length / 3) },
+        { length: Math.ceil(logPosts.length / 3) },
         (_, i) => i + 1
       )}
       current={params.page}
