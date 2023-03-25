@@ -1,0 +1,58 @@
+Hello everyone! This week, we made a couple of key improvements to the dashboard and the Chrome extension.
+
+In summary:
+
+- Automatic indexing via the Chrome extension is back.
+- Get generated answers directly in Google.
+- Infinite scroll in folders.
+- Chat with any level of the file system in the dashboard.
+
+### Chrome Extension:
+
+The Chrome extension received some important updates this week, including bug fixes, some brand new features, and even some returning ones.
+
+**Automatic Indexing:**
+
+A feature from a previous version of Operand, "Automatic Indexing," allows you to import all the pages you visit in Chrome to a specified folder in Operand. This essentially gives Operand knowledge of everything you read online!
+
+For privacy reasons, this feature is disabled by default, and we can only import publicly accessible web pages (no banking information or pages that require logins).
+
+If you are going to use this feature, we strongly recommend creating a dedicated folder. Automatic indexing could generate thousands of files over time within the chosen folder, and it's much easier to manage when contained within a single folder.
+
+**Answer Injection:**
+
+Previous versions of Operand included a feature called answer generation, which would replace your first search result with a generated answer. In the current version, answer injection works differently. Operand does not replace the search result, but instead adds a chat panel next to the results. This allows you to get the answer and ask follow-up questions if necessary.
+
+This feature is also disabled by default, but requires no additional configuration to get started!
+
+**Other fixes/improvements:**
+
+- You can now set a shared folder as the default folder to restrict search and conversations to.
+- Fixed an issue where confidence tooltips would permanently stay open.
+- Fixed several issues with rendering result card file names and folder names.
+- Fixed some background script errors.
+
+### Dashboard:
+
+The dashboard has received some much-needed work, specifically in terms of visibility and interaction.
+
+**Infinite Scroll**
+
+The first new feature is infinite scroll, which, as the name suggests, allows you to scroll through your folders. Previously, folders would only load the first 50 files to show on the dashboard. Now, you can scroll and see all of your files!
+
+**Side-bar:**
+
+The folder view now includes a sidebar that provides more detailed information about your files and allows you to chat at the folder level.
+
+The first tab on the panel, 'Details', displays additional information about the selected file or, if nothing is selected, the folder you are currently viewing. We plan to add more interesting information here in the future, but for now, it's just the basics.
+
+The second tab on the panel, 'Chat', enables you to converse with Operand at the folder level. Previously, this was only available on a per-file basis, but we hope this will open up new conversations with multiple data sources, rather than just a single file.
+
+### Smaller bug fixes / improvements
+
+- Sitemaps and RSS smart folders are no longer hidden from non-developer accounts.
+- Owner emails no longer overflow their row.
+- Various improvements to file browser stability.
+- Improved URL importing to support new automatic indexing
+  - Deprecated smart parameter in favour of an options object
+  - Support deduplication of URLs when importing.

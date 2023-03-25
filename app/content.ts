@@ -3,6 +3,7 @@ import OperatorLog2 from "./content/operator-log-2.mdx";
 import OperatorLog3 from "./content/operator-log-3.mdx";
 import OperatorLog4 from "./content/operator-log-4.mdx";
 import OperatorLog5 from "./content/operator-log-5.mdx";
+import OperatorLog6 from "./content/operator-log-6.mdx";
 
 import VirtualAssistants from "./content/virtual-assistants.mdx";
 import SearchIsSolved from "./content/search-is-solved.mdx";
@@ -91,6 +92,15 @@ export const allPosts: Post[] = [
     slug: "operator-log-5",
     tags: ["log"],
     content: OperatorLog5({}),
+  },
+  {
+    title: "Operator Log #6",
+    date: "2023-03-24",
+    description:
+      "Automatic indexing, infinite scroll, chat with folders, and more!",
+    slug: "operator-log-6",
+    tags: ["log"],
+    content: OperatorLog6({}),
   },
 ].sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
