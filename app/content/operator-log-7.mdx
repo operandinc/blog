@@ -1,0 +1,31 @@
+Hello there! Welcome to the last week of March, code-named "code week". We have made improvements to our internal code and added support for code in Operand. Code :)
+
+In summary:
+
+- Added the Github repo smart folder.
+- Added support for file upload and processing of most programming languages.
+- Lots of under-the-hood improvements.
+
+### Github Smart Folder:
+
+Our integration with Github is finally here! You can now sync your repositories and get answers and search results directly from your code, commits, issues, and pull requests.
+
+To get started, link your Operand account with Github from the account page. After that, create a Github smart folder using our revamped smart folder creation process.
+
+Any new data from the repository will automatically sync to the folder. We hope to add viewing and various code processing improvements in the coming weeks to make this smart folder even more useful.
+
+### Smaller bug fixes/improvements
+
+- Added support for much larger sitemaps (tested with a 15,000 link sitemap)
+- Improved indexing speed for smart folders.
+- Fixed several smaller indexing bugs.
+- Reworked Linear smart folder to use webhooks.
+- Implemented file versioning (not yet exposed in the app or API).
+- Fixed an error that occurred when saving markdown documents.
+- Added support for heads or tails in converse (thanks Matthew).
+
+### Known Issues
+
+- Deleting large folders and files is not working as expected.
+- Permanent temporary files are being created when indexing certain URLs.
+- Recents and favourites are not working.

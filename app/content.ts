@@ -4,6 +4,7 @@ import OperatorLog3 from "./content/operator-log-3.mdx";
 import OperatorLog4 from "./content/operator-log-4.mdx";
 import OperatorLog5 from "./content/operator-log-5.mdx";
 import OperatorLog6 from "./content/operator-log-6.mdx";
+import OperatorLog7 from "./content/operator-log-7.mdx";
 
 import VirtualAssistants from "./content/virtual-assistants.mdx";
 import SearchIsSolved from "./content/search-is-solved.mdx";
@@ -101,6 +102,14 @@ export const allPosts: Post[] = [
     slug: "operator-log-6",
     tags: ["log"],
     content: OperatorLog6({}),
+  },
+  {
+    title: "Operator Log #7",
+    date: "2023-03-31",
+    description: "Github smart folders, code support, and speed improvements!",
+    slug: "operator-log-7",
+    tags: ["log"],
+    content: OperatorLog7({}),
   },
 ].sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
