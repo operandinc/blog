@@ -5,6 +5,7 @@ import OperatorLog4 from "./content/operator-log-4.mdx";
 import OperatorLog5 from "./content/operator-log-5.mdx";
 import OperatorLog6 from "./content/operator-log-6.mdx";
 import OperatorLog7 from "./content/operator-log-7.mdx";
+import OperatorLog8 from "./content/operator-log-8.mdx";
 
 import VirtualAssistants from "./content/virtual-assistants.mdx";
 import SearchIsSolved from "./content/search-is-solved.mdx";
@@ -110,6 +111,15 @@ export const allPosts: Post[] = [
     slug: "operator-log-7",
     tags: ["log"],
     content: OperatorLog7({}),
+  },
+  {
+    title: "Operator Log #8",
+    date: "2023-04-07",
+    description:
+      "More file types, improved integrations, and lots of behind-the-scenes improvements!",
+    slug: "operator-log-8",
+    tags: ["log"],
+    content: OperatorLog8({}),
   },
 ].sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
