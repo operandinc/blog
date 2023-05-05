@@ -12,7 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.10",
     "@heroicons/react": "^2.0.16",
-    "@next/font": "13.1.6",
+    "@next/font": "13.4.1",
     "@next/mdx": "^13.2.4",
     "@operandinc/sdk": "^5.0.19",
     "@tailwindcss/line-clamp": "^0.4.2",
